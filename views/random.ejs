@@ -1,0 +1,10 @@
+<div style="margin: 10px">
+    <%- include('partials/dictionary_navigation') %>
+</div>
+
+<div class="ui inverted segment">
+    <h2 class="ui header">Co to znaczy ?</h2> 
+    <h2>  <%= word %>  </h2>
+<!--<a href=<% `/wordid/${word._id}` %> >Sprawdź</a>-->
+<a href="<%= `/dict/wordid/${wordid}/${answerLang}`  %>" >   <button class="ui orange basic button">Sprawdź</button></a>
+</div>

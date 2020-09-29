@@ -1,0 +1,36 @@
+
+<div id="nav">
+    
+    <span style="margin: 10px;">
+       <a href="/dict/random/ita"><button class="ui primary button" href="/dict/random/ita">
+      Losuj włoskie
+    </button></a> 
+    </span>
+    
+        
+    <span style="margin: 10px;">
+        <a href="/dict/random/pol"><button class="ui primary button" href="/dict/random/ita">
+      Losuj polskie
+    </button></a>
+    </span>
+    
+    <span style="margin: 10px;">
+        <a href="/dict/addform"><button class="ui primary button" href="/dict/random/ita">
+      Nowe słowo
+    </button></a>
+    </span>
+        
+    <span style="margin: 10px;">
+        <a href="/dict/words"><button class="ui primary button" href="/dict/random/ita">
+      Pokaż słownik
+    </button></a>
+    </span>
+        
+    </div>
+    <div style="margin: 10px;"><% if (locals.loggedIn === null) { %>
+    <p>Jesteś nie zalogowany</p>
+    <% } else { %>
+    <p>Jesteś zalogowany jako <%= locals.loggedIn.name  %></p>
+    <% } %>
+    </div>
+    <div class="ui divider"></div>

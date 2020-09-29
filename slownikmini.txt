@@ -1,0 +1,14 @@
+verde
+zielony
+nero
+czarny
+bianco
+bialy
+rosso
+czerwony
+grigio
+szary
+giallo
+zolty
+azzuro
+niebieski

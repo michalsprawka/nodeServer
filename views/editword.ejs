@@ -1,0 +1,15 @@
+<div style="margin: 10px">
+    <%- include('partials/dictionary_navigation') %>
+</div>
+
+<h2>Edycja</h2>
+<form action="<%=`/dict/editword/${id}` %>" method="post">
+    <input type="text" name="itaword" value="<%=ita%>">
+    <input type="text" name="polword" value="<%=pol%>">
+    <input type="submit" name="Submit">
+</form>
+
+
+<% if(info != ""){ %>
+<h3><%= info %> </h3>
+<% } %>

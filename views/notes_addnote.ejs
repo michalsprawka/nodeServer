@@ -1,0 +1,17 @@
+<div style="margin: 10px">
+    <%- include('partials/notes_navigation') %>
+</div>
+
+
+<form class="ui form" action="/notes/newnote" method="post">
+    <div class="field">
+        <input type="text" name="title" placeholder="Tytuł">
+    </div>
+    <div class="field">
+        
+        <textarea name="body" placeholder="Tutaj pisz co chcesz"></textarea>
+    </div>
+   
+   
+    <button class="ui button" type="submit">Zapisz</button>
+</form>

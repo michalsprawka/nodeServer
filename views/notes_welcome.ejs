@@ -1,0 +1,22 @@
+<div style="margin: 10px">
+    <%- include('partials/notes_navigation') %>
+</div>
+
+<h1>Witaj w dzienniku :)</h1>
+<div class="ui inverted segment">
+    <div class="ui inverted relaxed divided list">
+        <% notes.forEach(n => { %>
+            <div class="item">
+                <div class="content">
+                    <div class="header"><%=n.title %></div>
+                    <%=n.body  %>
+                    <div style="text-align: right;"><small>Utworzono:<%=n.date %></small>
+                        <a href="/notes/delnote/<%=n._id%>">
+                            <i class="trash alternate outline icon"></i>
+                        </a>   
+                    </div>
+                </div>    
+            </div>
+        <% }); %>
+    </div>
+</div>

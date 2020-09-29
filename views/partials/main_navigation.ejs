@@ -1,0 +1,26 @@
+
+<div id="nav">
+    
+    <span style="margin: 10px;">
+       <a href="/dict/welcome"><button class="ui brown basic button" href="/dict/random/ita">
+      Włoskie słówka
+    </button></a> 
+    </span>
+    
+        
+    <span style="margin: 10px;">
+        <a href="/notes"><button class="ui brown basic button" href="/dict/random/ita">
+      Dziennik
+    </button></a>
+    </span>
+    
+    
+        
+</div>
+    <div style="margin: 10px;"><% if (!loggedIn) { %>
+    <p>Jesteś nie zalogowany</p>
+    <% } else { %>
+    <p>Jesteś zalogowany jako <%= locals.user.name  %></p>
+    <% } %>
+    </div>
+    <div class="ui divider"></div>

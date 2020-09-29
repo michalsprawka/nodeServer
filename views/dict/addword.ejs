@@ -1,0 +1,15 @@
+<form class="ui form" action="/dict/word" method="post">
+    <div class="field">
+        <input type="text" name="itaword" placeholder="Włoskie słowo">
+    </div>
+    <div class="field">
+         <input type="text" name="polword" placeholder="Polskie słowo">
+    </div>
+   
+    <button class="ui button" type="submit">Zapisz</button>
+</form>
+
+
+<% if(info != ""){ %>
+<h3><%= info %> </h3>
+<% } %>

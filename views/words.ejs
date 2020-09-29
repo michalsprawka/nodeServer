@@ -1,0 +1,21 @@
+<div style="margin: 10px">
+  <%- include('partials/dictionary_navigation') %>
+</div>
+<table class="ui celled table">
+ <thead>
+    <tr><th>Włoskie</th>
+    <th>Polskie</th>
+    <th>Akcja 1</th>
+    <th>Akcja 2</th>
+  </tr></thead>
+<tbody>
+<% words.forEach(w => { %>
+<tr>
+    <td> <%=w.itaWord %>  </td>
+    <td><%=w.polWord %> </td>
+    <td><a href="<%= `/dict/delword/${w._id}`  %>">Usuń </a> </td>
+    <td> <a href="<%= `/dict/addform/${w.itaWord}/${w.polWord}/${w._id}`  %>">Edytuj </a></td>
+</tr>
+<% }); %>
+</tbody>
+</table>
