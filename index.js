@@ -12,7 +12,7 @@ const passport = require("passport"); //+
 
 const mongoURI = "mongodb://testUser:test123@ds129352.mlab.com:29352/wordsdb";
 mongoose.Promise = global.Promise;
-
+//test
 //passport config:
 require('./config/passport')(passport) //+
 
