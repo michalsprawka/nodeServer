@@ -8,9 +8,10 @@ const wordsController = require("./controllers/wordsController");
 const flash = require('connect-flash'); //+
 const session = require('express-session'); //+
 const passport = require("passport"); //+
-//const { receiveMessageOnPort } = require("worker_threads");
-
-const mongoURI = "mongodb://testUser:test123@ds129352.mlab.com:29352/wordsdb";
+const dotenv = require('dotenv');
+dotenv.config();
+console.log("FROM ENV",process.env.DBUSER, process.env.DBPASS);
+const mongoURI = `mongodb://${process.env.DBUSER}:${process.env.DBPASS}@ds129352.mlab.com:29352/wordsdb`;
 mongoose.Promise = global.Promise;
 //test
 //passport config:
