@@ -11,7 +11,11 @@ const router = express.Router();
     Word.find({})
     .exec()
     .then(data => {
-        res.render("words", {words: data});
+        if(req.query.format == "json"){
+            res.json(data)
+        }else{
+            res.render("words", {words: data});
+        }    
     })
 };
 
