@@ -1,1 +1,5 @@
-alert("Hello!!!!");
+$(doument).ready(()=> {
+    $("#testbutton").click(()=>{
+        alert("hello!!!!")
+    })
+})
