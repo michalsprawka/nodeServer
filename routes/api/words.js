@@ -10,7 +10,7 @@ router.get('/all', (req, res)=> {
     })
 })
 
-router.get('/randomword/', (req, res) => {
+router.get('/randomword', (req, res) => {
     Word.count().exec(function (err, count) {
 
         // Get a random entry
