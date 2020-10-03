@@ -94,6 +94,7 @@ app.use('/',require('./routes/index')); //+
 app.use('/dict', wordsController)
 app.use('/users',require('./routes/users')); //+
 app.use('/notes',require('./routes/notes'));
+app.use('/api/words',require('./routes/api/words'));
 
 app.listen(port, "192.168.1.178", () =>{
 	console.log(`Server runing on port: ${port}`);
