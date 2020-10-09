@@ -2,7 +2,6 @@ const port = 3000, express = require("express"), app=express();
 const layouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 const Word = require("./models/word");
-//const wordsController = require("./controllers/wordsController");
 const flash = require('connect-flash'); //+
 const session = require('express-session'); //+
 const passport = require("passport"); //+
@@ -58,7 +57,6 @@ app.set("view engine", "ejs");
 
 app.use('/',require('./routes/index')); //+
 app.use('/dict', wordsController)
-//app.use('/dict', wordsController)
 app.use('/dict', require('./routes/words'))
 app.use('/users',require('./routes/users')); //+
 app.use('/notes',require('./routes/notes'));
