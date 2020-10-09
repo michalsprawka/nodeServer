@@ -56,7 +56,6 @@ app.set("view engine", "ejs");
 
 
 app.use('/',require('./routes/index')); //+
-app.use('/dict', wordsController)
 app.use('/dict', require('./routes/words'))
 app.use('/users',require('./routes/users')); //+
 app.use('/notes',require('./routes/notes'));
