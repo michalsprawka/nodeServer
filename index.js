@@ -9,12 +9,12 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 //console.log("FROM ENV",process.env.DBUSER, process.env.DBPASS);
-const mongoURI = `mongodb://${process.env.DBUSER}:${process.env.DBPASS}@ds129352.mlab.com:29352/wordsdb`;
+const mongoURI = `mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@cluster0.rz656.mongodb.net/<dbname>?retryWrites=true&w=majority`;
 //mongoose.Promise = global.Promise;
 
 require('./config/passport')(passport) //+
 
-mongoose.connect(mongoURI);
+mongoose.connect(mongoURI,{ useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.once("open", ()=>{
 	console.log("Succesfully connected to mongoDB using mongoose");
